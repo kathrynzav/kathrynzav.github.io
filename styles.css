@@ -1,0 +1,176 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #121212;
+    color: #eaeaea;
+    font-family: 'Roboto', sans-serif;
+}
+
+body a {
+    color:#00bcd4;
+}
+
+h1, h2, h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: #00c8ff;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    background: linear-gradient(to bottom, rgba(18, 18, 18, 0) 60%, #121212 100%), 
+                url('images/SmileWolf.png') no-repeat center 20%;
+    background-size: cover;
+}
+
+.overlay {
+    position: relative; /* This content scrolls with the page */
+    padding-top: 50px; /* Adds space for the navbar initially */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    padding-bottom: 0px;
+    background-color: rgba(18, 18, 18, 0.6); /* Translucent background */
+}
+
+.scroll-section {
+    opacity: 0; /* Initially hidden */
+    transform: translateY(50px); /* Move slightly downward */
+    transition: opacity 0.8s ease, transform 0.8s ease; /* Smooth animation */
+}
+
+.scroll-section.is-visible {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Reset position */
+}
+
+
+.name-text {
+    margin: 0;
+    font-family: 'Orbitron', serif; /* Futuristic serif font */
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+.navigation {
+    display: flex;
+    gap: 20px; /* Space between links */
+    margin-top: 10px;
+}
+
+.navbar {
+    position: relative; /* It is part of the normal flow of the page */
+    width: 100%;
+    background-color: rgba(18, 18, 18, 0.6); /* Translucent black background */
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+/* Fixed navbar when scrolled */
+.navbar.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(18, 18, 18, 0.6); /* Translucent black background */
+    z-index: 1000;
+}
+
+/* Adjust the layout of the navigation links */
+.navigation {
+    display: flex;
+    gap: 20px; /* Space between links */
+    list-style: none;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+    color: #00bcd4; /* Change color on hover */
+}
+
+/* Section Styles */
+section {
+    padding: 50px 20px;
+    min-height: 50vh; /* Full viewport height for each section */
+    text-align: center;
+}
+
+href {
+    color:#00c8ff;
+}
+
+#about {
+    /* padding: 30px 20px; */
+    text-align: center; /* Centers the section title */
+  }
+  
+  #about h2 {
+    margin-bottom: 20px;
+  }
+  
+  .about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Adds space between the image and text */
+  }
+  
+  .about-image {
+    flex: 1; /* Takes up half the width */
+    display: flex;
+    justify-content: center;
+  }
+  
+  .about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Gives the image rounded corners */
+  }
+  
+  .about-text {
+    flex: 1; /* Takes up half the width */
+    text-align: left; /* Aligns text to the left */
+  }
+  
+  .about-text p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+.centered-links {
+    display: flex;
+    justify-content: center; /* Centers the entire container */
+    align-items: center; /* Vertically aligns the content */
+    width: 100%; /* Ensures the container spans the full width */
+}
+
+.left-side, .right-side {
+    flex: 1; /* Ensures each side takes equal space */
+    text-align: center; /* Centers text within each side */
+}
+
+.separator {
+    padding: 0 10px; /* Adds spacing around the separator */
+    font-size: 1.5rem; /* Adjusts the size of the separator if needed */
+}
+
+#contact {
+    margin-top: 100px;
+    margin-bottom: 10px;
+}
